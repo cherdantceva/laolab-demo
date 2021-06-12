@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react'
+import styles from './styles.scss'
 
-
-const Logo = () => {
-
+const Info = (props) => {
+    const {children, color} = props
     return (
-        <a className="logo" href="/" />
+        <div className={`info ${color === 'blue' ? "info_blue" : ''} ${color === 'gray' ? "info_gray" : ''}`}>
+            <div className={`text ${color === 'blue' ? "text_blue" : ''} ${color === 'gray' ? "text_gray" : ''}`}>
+                {children}
+            </div>
+        </div>
     );
 };
 
-export default Logo;
+export default Info;
 
 
 

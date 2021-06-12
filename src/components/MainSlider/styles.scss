@@ -1,5 +1,90 @@
-.main-mobile {
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
+@import "src/res/scss/mixins";
+.main-slider {
+  &__slide {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem 6rem;
+  }
+  &__title {
+    max-width: 320px;
+    text-align: center;
+    padding-bottom: 3.2rem;
+    align-self: center;
+    margin-top: auto;
+  }
+  
+  &__subtitle {
+    @include title-3;
+    margin-bottom: 3.2rem;
+  }
+  
+  &__content {
+    margin: auto;
+  }
+  
+  &__video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    }
+    
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    @include title-3;
+    margin: auto auto 1.8rem;
+  }
+  
+  &__text {
+    @include text-18-mobile;
+    margin: 3.2rem 0;
+    display: block;
+  }
+  
+  &__link {
+    @include link-main;
+  
+    &:after {
+      background: white;
+    }
+  }
+  
+  &__bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+  }
+  
+  &__info {
+    @include info-bottom;
+    width: 50%;
+    transition: 0.3s width ease-in-out;
+    
+    &_work {
+      left: initial;
+      right: 0;
+    }
+    
+    &_100 {
+      width: 100%;
+    }
+  }
 }

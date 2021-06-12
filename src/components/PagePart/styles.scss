@@ -1,3 +1,15 @@
-.page {
-
+@import "src/res/scss/mixins";
+.page-part {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  padding: 10rem 10rem 10rem;
+  height: 100vh;
+  overflow: hidden;
+  @include mediaMob {
+    width: 100%;
+    padding: 4rem 2rem 6rem;
+  }
 }

@@ -1,13 +1,13 @@
 import styles from './styles.scss'
+import video from "../../res/img/lao.jpg"
 
-const Logo = () => {
-
+const Video = () => {
     return (
-        <a className="logo" href="/" />
+        <img className="video" src={video} />
     );
-};
+}
 
-export default Logo;
+export default Video;
 
 
 

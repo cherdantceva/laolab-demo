@@ -1,13 +1,26 @@
 @import "src/res/scss/mixins";
 
-.logo {
-  display: block;
-  height: 5.6rem;
-  width: 5.6rem;
-  background: url("../../res/img/logo.svg") no-repeat 100% center;
-  @include mediaMob {
-    height: 3.2rem;
-    width: 3.2rem;
-    background: url("../../res/img/logo-mobile.svg") no-repeat 100% center;
+.link {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  &__text {
+    width: auto;
+    color: white;
+    white-space: nowrap;
+    @include main-text;
+    @include mediaMob {
+      @include text-inter-16;
+    }
+  }
+  
+  &__icon {
+    &_right {
+      margin-left: 1.2rem;
+    }
+    
+    &_left {
+      margin-right: 1.2rem;
+    }
   }
 }

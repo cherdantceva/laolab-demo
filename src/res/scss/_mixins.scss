@@ -76,6 +76,24 @@
     }
 }
 
+//info
+@mixin info {
+  position: absolute;
+  height: 6.4rem;
+  width: 100%;
+  left: 0;
+}
+
+@mixin info-bottom {
+  @include info;
+  bottom: 0;
+}
+
+@mixin info-top {
+  @include info;
+  top: 0;
+}
+
 //breakpoints
 
 @mixin mediaMob {

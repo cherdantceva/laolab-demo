@@ -1,0 +1,10 @@
+@import "src/res/scss/mixins";
+.page {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  @include mediaMob {
+    overflow: auto;
+    flex-direction: column;
+  }
+}

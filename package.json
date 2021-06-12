@@ -34,5 +34,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.0",
+    "react-id-swiper": "^4.0.0",
+    "react-inlinesvg": "^2.3.0",
+    "swiper": "^6.7.0"
   }
 }
